@@ -13,8 +13,6 @@ output = motor_output()
 output.time = 0.0
 output.output = 0.0
 
-
-
 #Setup parameters, vriables and callback functions here (if required)
 def callback(msg):
     global signal_data2, time_data2
@@ -25,7 +23,6 @@ def callback(msg):
 def stop():
  #Setup the stop message (can be the same as the control message)
   print("Stopping")
-
 
 if __name__=='__main__':
     #Initialise and Setup node
@@ -45,15 +42,11 @@ if __name__=='__main__':
         #rospy.loginfo("The proessed signal value is: %f at a time %f",signal, time_data)
         #pub.publish(signal_data)
 
-
 	output.time = time_data2
         output.output = signal
 	pub.publish(output)
 	#rospy.loginfo("The generated signal value is: %f at a time %f", signal, time_data2)
 	print_info = "%3f | %3f" %(signal,time_data2)
         rospy.loginfo(print_info)
-
-
-
 
         rate.sleep()
