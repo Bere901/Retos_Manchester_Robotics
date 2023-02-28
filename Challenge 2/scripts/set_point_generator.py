@@ -8,9 +8,6 @@ msg = set_point()
 msg.time_x = 0.0
 msg.signal_y = 0.0
 
-
-
-
 if __name__=='__main__':
     pub_signal=rospy.Publisher("set_point",set_point, queue_size=10)
     pub_motor=rospy.Publisher("signal",Float32, queue_size=10)
