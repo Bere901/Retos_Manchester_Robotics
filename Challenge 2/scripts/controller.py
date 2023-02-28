@@ -12,12 +12,6 @@ tau = rospy.get_param("tau",6.28)
 R = rospy.get_param("R",0.01) 
 dt = rospy.get_param("dt",5) 
 
-#kp = 2
-#ki = 1
-#tau = 2
-#R = 3
-#dt = 4
-
 signal_data = 0.0
 time_data = 0.0
 
