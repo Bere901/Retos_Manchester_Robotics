@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<launch>
+    <rosparam file = "$(find pid_control)/config/system_params.yaml" command = "load"  />
+        <node name="set_point_generator" pkg="pid_control" type="set_point_generator.py" output="screen" launch-prefix="gnome-terminal --command" />
+        <node name="controller" pkg="pid_control" type="controller.py" output="screen" launch-prefix="gnome-terminal --command" />
+	<node name="system" pkg="pid_control" type="system.py" output="screen" launch-prefix="gnome-terminal --command" />
+	
+</launch>
