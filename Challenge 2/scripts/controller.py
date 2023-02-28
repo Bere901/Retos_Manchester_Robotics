@@ -6,8 +6,8 @@ from pid_control.msg import set_point
 from pid_control.msg import motor_input
 from pid_control.msg import motor_output
 
-kp = rospy.get_param("kp",0.5) 
-ki = rospy.get_param("ki",0.3) 
+kp = rospy.get_param("kp",5) 
+ki = rospy.get_param("ki",0.1) 
 tau = rospy.get_param("tau",6.28) 
 R = rospy.get_param("R",0.01) 
 dt = rospy.get_param("dt",5) 
