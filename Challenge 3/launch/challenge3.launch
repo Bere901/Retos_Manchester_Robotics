@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <node name="Input" pkg="motor_control" type="Input.py">
+    <param name="port"	type="string"	value="/dev/ttyACM0"/>   
+    </node>
+    
+</launch>
