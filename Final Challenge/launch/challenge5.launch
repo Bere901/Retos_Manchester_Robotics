@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<launch>
+    <rosparam file = "$(find reto_final)/config/system_params.yaml" command = "load"  />
+        <node name="set_point_generator" pkg="reto_final" type="input.py" output="screen" launch-prefix="gnome-terminal --command" />
+        <node name="controller" pkg="reto_final" type="controller.py" output="screen" launch-prefix="gnome-terminal --command" />
+	
+	
+</launch>
